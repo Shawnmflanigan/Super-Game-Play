@@ -5,7 +5,9 @@ import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
-import ImageAvatar from "../components/ImageAvatar";
+import Avatar from '@material-ui/core/Avatar';
+
+import team from "./Team"
 
 const useStyles = makeStyles({
   root: {
@@ -24,13 +26,6 @@ const useStyles = makeStyles({
   },
 });
 
-const team = [
-  { id: 1, name: "Revel", role: "AlphaCeo" },
-  { id: 2, name: "Noah", role: "dev" },
-  { id: 3, name: "River", role: "dev" },
-  { id: 4, name: "Kipling", role: "dev" },
-];
-
 function OurTeam() {
   const classes = useStyles();
 
@@ -43,7 +38,7 @@ function OurTeam() {
         {team.map((team) => (
           <Card className={classes.root} variant="outlined" key={team.id}>
             {team.name}
-            <ImageAvatar />
+            <Avatar className={classes.large} alt={team.name} src={team.avatar}/>
             {team.role}
             <CardActions>
               <Button size="small">We can put links here</Button>

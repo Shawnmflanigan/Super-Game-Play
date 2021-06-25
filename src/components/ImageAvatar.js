@@ -1,7 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Avatar from '@material-ui/core/Avatar';
-import Rev from '../images/rev.png';
+import team from "./Team"
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -20,12 +20,12 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+console.log({team})
 export default function ImageAvatar() {
   const classes = useStyles();
-
   return (
     <div className={classes.root}>
-      <Avatar alt="Revel Flanigan" src={Rev} className={classes.large} />
+      <Avatar className={classes.large}/>
     </div>
   );
 }
