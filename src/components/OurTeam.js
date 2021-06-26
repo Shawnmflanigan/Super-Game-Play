@@ -7,6 +7,8 @@ import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import Avatar from '@material-ui/core/Avatar';
 
+import Link from "react-router-dom";
+
 import team from "./Team"
 
 const useStyles = makeStyles({
@@ -41,7 +43,7 @@ function OurTeam() {
             <Avatar className={classes.large} alt={team.name} src={team.avatar}/>
             {team.role}
             <CardActions>
-              <Button size="small">We can put links here</Button>
+              <Button size="small" href={team.link}>We can put links here</Button>
             </CardActions>
           </Card>
         ))}
